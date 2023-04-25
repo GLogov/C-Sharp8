@@ -5,6 +5,10 @@
 // 11 16 15 06
 // 10 09 08 07
 
+int[,] array = FillArray(4, 4);
+PrintArray(array);
+
+
 
 int[,] FillArray(int row, int col)
 {
@@ -20,5 +24,19 @@ int[,] FillArray(int row, int col)
         array[i+1, col-1] = counter;
         counter ++;
     }
+    return array;
+}
 
+void PrintArray(int[,] array) // Печатает двумерный массив
+{
+    for (var i = 0; i < array.GetLength(0); i++)
+    {
+        for (var j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write($"<{array[i, j]}>");
+            Console.Write(" ");
+        }
+
+        Console.WriteLine();
+    }
 }
