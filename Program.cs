@@ -26,18 +26,15 @@ void SortRow()
         for (int j = 0; j < colCount; j++)
             row[j] = array[i, j];
         BubbleSort(row);
-        Insert(true, i, row, array);
+        Insert(i, row, array);
     }
 }
 
-void Insert(bool isRow, int dim, int[] source, int[,] dest) // Вставляет отсортированные значения в исходный двумерный массив
+void Insert(int i, int[] source, int[,] dest) // Вставляет отсортированные значения в исходный двумерный массив
 {
     for (int k = 0; k < source.Length; k++)
     {
-        if (isRow)
-            dest[dim, k] = source[k];
-        else
-            dest[k, dim] = source[k];
+            dest[i, k] = source[k];
     }
 }
 
