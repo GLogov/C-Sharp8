@@ -32,14 +32,16 @@ int[,,] Generate3DArray(int m, int n, int l) // Создает трехмерн�
 
 void PrintArray(int[,,] array) // Печатает трехмерный массив
 {
-    for (var i = 0; i < array.GetLength(0); i++)
+    for (int k = 0; k < array.GetLength(2); k++)
     {
-        for (var j = 0; j < array.GetLength(1); j++)
+        for (var i = 0; i < array.GetLength(0); i++)
         {
-            for (int k = 0; k < array.GetLength(2); k++)
+            for (var j = 0; j < array.GetLength(1); j++)
             {
+
                 Console.Write($"<{array[i, j, k]}> ({i}, {j}, {k})");
                 Console.Write(" ");
+
             }
             Console.WriteLine();
         }
