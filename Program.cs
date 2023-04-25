@@ -43,7 +43,7 @@ void BubbleSort(int[] array) // Сортирует одномерный масс
     for (int i = 0; i < array.Length; i++)
         for (int j = 0; j < array.Length - i - 1; j++)
         {
-            if (array[j] > array[j + 1])
+            if (array[j] < array[j + 1])
             {
                 int temp = array[j];
                 array[j] = array[j + 1];
