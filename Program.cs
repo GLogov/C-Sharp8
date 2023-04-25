@@ -36,8 +36,6 @@ int[,] MatrixMultiplication(int[,] matrix1, int[,] matrix2) // Умножени�
     return matrix3;
 }
 
-
-
 int[,] Generate2DArray(int m, int n) // Создает двумерный массив
 {
     int[,] array = new int[m, n];
